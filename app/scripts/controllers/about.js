@@ -8,10 +8,15 @@
  * Controller of the spafelizApp
  */
 angular.module('spafelizApp')
-  .controller('AboutCtrl', function () {
+  .controller('AboutCtrl', aboutController);
+
+  aboutController.$inject = ['$state'];
+  
+  function aboutController($state) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  });
+    console.log('id: ', $state.params.id);
+  };

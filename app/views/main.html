@@ -1,21 +1,21 @@
-<div class="jumbotron">
-    <h1>Spa Feliz</h1>
-    <p class="lead">
-        <img src="https://pur.vamtam.com/wp-content/uploads/2017/12/pic6.jpg" alt="I'm Yeoman"><br>
-        El placer de los masajes.
-    </p>
-    <!-- <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p> -->
-</div>
-
-<div class="container">
-    <h4>Mi nombre es </h4> {{contexto.myNombre}}
-
-    <hr>
-    <p>
-        <h4>Servicios Ofrecidos</h4>
-        <div ng-repeat = "item in contexto.serviceList">
-            {{item.name}}
+<div class="row marketing">
+        <div class="plate">
+        <p class="script"><span>Servicios ofrecidos:</span></p>
+    </div>
+    <div class="card md-12">
+    <div class="card-body col-md-6 imageItem" ng-repeat="item in contexto.serviceList"
+        ng-style="{'background-image':'url({{item.image}})', 'background-position': 'center center', 'background-size': 'cover'}">
+        <div class="infoCard">
+        <h2 class="card-title">{{item.name}}</h2>
+        <h6 class="card-subtitle mb-2 text-muted">{{item.cost}}</h6>
+        <p class="card-text">{{item.description}}</p>
+        <span ng-if="item.endHappy">Con final feliz.
+            <span class="glyphicon glyphicon-ok"></span>
+        </span>
+        <span ng-if="!item.endHappy">Sin final feliz.
+            <span class="glyphicon glyphicon-remove"></span>
+        </span>
         </div>
-    </p>
-    
+    </div>
+    </div>
 </div>
