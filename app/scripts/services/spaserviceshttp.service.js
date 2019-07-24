@@ -9,7 +9,7 @@
  * # spaServices.factory
  * Factory in the spafelizApp.
  */
-angular.module('spafelizApp').factory('spaServicesHttp', spaServicesHttp);
+angular.module('spafelizApp').service('spaServicesHttp', spaServicesHttp);
 
 spaServicesHttp.$inject = ['$http', '$q', 'httpConfig'];
 
