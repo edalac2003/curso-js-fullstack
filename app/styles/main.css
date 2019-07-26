@@ -136,7 +136,7 @@ body {
  text-align: center;
 }
 .script {
- font-family: "Cantarell";
+ font-family: "Arvo";
  color: #fff;
  text-align: center;
  font-size: 50px;
@@ -144,7 +144,7 @@ body {
  margin:0;
 }
 .script span {
- background-color: #222;
+ background-color: rgb(70, 68, 68);
  padding: 0 0.3em;
 }
 .script:before {

@@ -8,8 +8,8 @@
         
         <div class="infoCard">
             <a ui-sref="home.about({id: item.id})" >
-                <h2 class="card-title">{{item.name}}</h2>
-                <h6 class="card-subtitle mb-2 text-muted">{{item.cost}}</h6>
+                <h2 class="card-title">{{item.name | uppercase}}</h2>
+                <h6 class="card-subtitle mb-2 text-muted">{{item.cost | currencyFormat}}</h6>
                 <p class="card-text">{{item.description}}</p>
                 <span ng-if="item.endHappy">Con final feliz.
                     <span class="glyphicon glyphicon-ok"></span>
