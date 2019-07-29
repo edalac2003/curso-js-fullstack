@@ -11,28 +11,20 @@
 
 angular.module('spafelizApp').controller('MainCtrl', mainCtrl);
 
-mainCtrl.$inject = ['spaServices', 'spaServicesHttp'];
+mainCtrl.$inject = ['spaServices'];
 
-function mainCtrl(spaServices, spaServicesHttp) {
+function mainCtrl(spaServices) {
     var vm = this;
     vm.$onInit = onInit;
-    vm.myNombre = 'Edwin Acosta';
-    vm.loadSpaServices = loadSpaServices;
     vm.loadSpaServicesHttp = loadSpaServicesHttp;
 
     function onInit(){
-        vm.loadSpaServices();
-        vm.loadSpaServicesHttp;
-    }
-
-    function loadSpaServices(){
-        vm.serviceList = spaServices.getAllServices();
-        console.log(vm.serviceList);
+        vm.loadSpaServicesHttp();
     }
 
     function loadSpaServicesHttp(){
         console.log('loadSpaServicesHttp loader');
-        spaServicesHttp.getAll()
+        spaServices.getAllServices()
         .then(function(result){
             vm.serviceList = result.data;
         })

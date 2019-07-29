@@ -9,34 +9,35 @@
  */
 angular.module('spafelizApp').controller('BookCtrl', bookCtrl);
 
-bookCtrl.$inject = ['spaServicesHttp'];
+bookCtrl.$inject = ['spaServices'];
 
-function bookCtrl(spaServicesHttp) {
+function bookCtrl(spaServices) {
   var vm = this;
   vm.form = {};
-  vm.submitBook = submitBook; 
   vm.$onInit = onInit();
+  vm.submitBook = submitBook; 
   vm.loadSpaServicesHttp = loadSpaServicesHttp;
 
-  function onInit(){
-    vm.loadSpaServices;
-    vm.loadSpaServicesHttp;
-    console.log('Book Controller loader. . .');
-  }
-
   function submitBook(){
+    debugger;
     console.log('Formulario' + vm.form);
   }
 
+  function onInit(){
+    debugger;
+      vm.loadSpaServicesHttp();
+  }
+
   function loadSpaServicesHttp(){
-    console.log('loadSpaServicesHttp loader');
-    spaServicesHttp.getAll()
-    .then(function(result){
-        vm.serviceList = result.data;
-    })
-    .catch(function(error){
-        alert('AAAAAAAAAAAAAAAAAAAAAAAAAAaa')
-    })
+    debugger;
+    console.log('Booking loader');
+      spaServices.getAllServices()
+      .then(function(result){
+          vm.serviceList = result.data;
+      })
+      .catch(function(error){
+          alert('AAAAAAAAAAAAAAAAAAAAAAAAAAaa')
+      })
 
   }
-};
+}

@@ -16,7 +16,7 @@ function settings($stateProvider, $urlRouterProvider){
         name : 'home.main',
         url : '/',
         templateUrl : 'views/main.html',
-        controller: 'MainCtrl as contexto'
+        controller: 'MainCtrl as vm'
     }
 
     var aboutState = {
