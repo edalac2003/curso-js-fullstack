@@ -72,10 +72,10 @@
 
 /* Supporting marketing content */
 .marketing {
- margin: 40px 0;
+ margin: 20px 0;
 }
 .marketing p + h4 {
- margin-top: 28px;
+ margin-top: 20px;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -93,7 +93,7 @@
  }
  /* Space out the masthead */
  .header {
-   margin-bottom: 30px;
+   margin-bottom: 15px;
  }
  /* Remove the bottom border on the jumbotron for visual effect */
  .jumbotron {
@@ -136,15 +136,16 @@ body {
  text-align: center;
 }
 .script {
- font-family: "Arvo";
+ font-family: "Fantasy";
  color: #fff;
  text-align: center;
- font-size: 50px;
+ font-size: 70px;
  position: relative;
  margin:0;
+ font-style: italic;
 }
 .script span {
- background-color: rgb(70, 68, 68);
+ /* background-color: rgb(70, 68, 68); */
  padding: 0 0.3em;
 }
 .script:before {

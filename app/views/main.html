@@ -7,7 +7,7 @@
         ng-style="{'background-image':'url({{item.image}})', 'background-position': 'center center', 'background-size': 'cover'}">
         
         <div class="infoCard">
-            <a ui-sref="home.about({id: item.id})" >
+            <a ui-sref="home.detail({id: item.id})" >
                 <h2 class="card-title">{{item.name | uppercase}}</h2>
                 <h6 class="card-subtitle mb-2 text-muted">{{item.cost | currencyFormat}}</h6>
                 <p class="card-text">{{item.description}}</p>

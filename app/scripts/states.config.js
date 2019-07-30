@@ -19,16 +19,10 @@ function settings($stateProvider, $urlRouterProvider){
         controller: 'MainCtrl as vm'
     }
 
-    var aboutState = {
-        name : 'home.about2',
-        url : '/about',
-        templateUrl : 'views/about.html'
-    }
-
     var detailState = {
-        name : 'home.about',
-        url : '/about/{id}',
-        templateUrl : 'views/about.html',
+        name : 'home.detail',
+        url : '/detail/{id}',
+        templateUrl : 'views/detail.html',
         controller : 'AboutCtrl as vm'
     }
 

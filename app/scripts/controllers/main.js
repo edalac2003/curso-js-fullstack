@@ -29,7 +29,7 @@ function mainCtrl(spaServices) {
             vm.serviceList = result.data;
         })
         .catch(function(error){
-            alert('AAAAAAAAAAAAAAAAAAAAAAAAAAaa')
+            alert('Error: ' + error) 
         })
 
     }
