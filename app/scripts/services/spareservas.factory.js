@@ -7,7 +7,7 @@
  * # spareservas.factory
  * Factory in the spafelizApp.
  */
-angular.module('spafelizApp').factory('spareservas', spaReservas);
+angular.module('spafelizApp').factory('spaReservas', spaReservas);
 
 spaReservas.$inject = ['spaReservas', '$q'];
 

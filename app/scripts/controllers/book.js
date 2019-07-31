@@ -14,14 +14,24 @@ bookCtrl.$inject = ['spaServices', 'spaReservas'];
 function bookCtrl(spaServices, spaReservas) {
     var vm = this;
     vm.form = {};
+    var reserva = {};
     vm.$onInit = onInit;
     vm.submitBook = submitBook; 
     vm.loadSpaServicesHttp = loadSpaServicesHttp;
 
     function submitBook(){
         debugger;
-        console.log('Formulario' + vm.form);
-        spaReservas.save()
+        var fecha = moment(vm.form.fechareserva).format('DD/MM/YYYY');
+        var hora = moment(vm.form.fechareserva).format('HH:MM');
+        reserva.nombres = vm.form.nombres;
+        reserva.apellidos = vm.form.apellidos;
+        reserva.email = vm.form.email;
+        reserva.fechareserva = fecha;
+        reserva.horareserva = vm.form.horareserva;
+        reserva.idservicio = hora;
+        reserva.estado = 1 ;
+
+        spaReservas.save(reserva)
         .then(function(result){
             
         })

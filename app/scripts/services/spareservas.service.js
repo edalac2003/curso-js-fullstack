@@ -19,11 +19,11 @@ function spaReservas($http, $q, httpConfig) {
 
     return services;
 
-    function save(){
+    function save(reserva){
         var defered = $q.defer();
         var promise = defered.promise;
         const url = httpConfig.url + httpConfig.services.save
-        $http.post(url)
+        $http.post(url, reserva)
         .then(function(data){
             defered.resolve(data);
         })
