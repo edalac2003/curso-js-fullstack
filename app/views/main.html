@@ -1,25 +1,24 @@
 <div class="row marketing">
-        <div class="plate">
-        <p class="script"><span>Servicios Ofrecidos</span></p>
+    <div class="plate">
+        <p class="script"><span>SPA Feliz Bienvenidos</span></p>
     </div>
     <div class="card md-12">
-    <div class="card-body col-md-6 imageItem" ng-repeat="item in vm.serviceList"
-        ng-style="{'background-image':'url({{item.image}})', 'background-position': 'center center', 'background-size': 'cover'}">
-        
-        <div class="infoCard">
-            <a ui-sref="home.detail({id: item.id})" >
-                <h2 class="card-title">{{item.name | uppercase}}</h2>
-                <h6 class="card-subtitle mb-2 text-muted">{{item.cost | currencyFormat}}</h6>
-                <p class="card-text">{{item.description}}</p>
-                <span ng-if="item.endHappy">Con final feliz.
-                    <span class="glyphicon glyphicon-ok"></span>
-                </span>
-                <span ng-if="!item.endHappy">Sin final feliz.
-                    <span class="glyphicon glyphicon-remove"></span>
-                </span>
-
-            </a>
+        <div class="card-body col-md-6 imageItem" ng-repeat="item in vm.serviceList"
+            ng-style="{'background-image':'url({{item.image}})', 'background-position': 'center center', 'background-size': 'cover'}">
+            
+            <div class="infoCard">
+                <a ui-sref="home.detail({id: item.id})" >
+                    <h2 class="card-title">{{item.name | uppercase}}</h2>
+                    <h6 class="card-subtitle mb-2 text-muted">{{item.cost | currencyFormat}}</h6>
+                    <p class="card-text">{{item.description}}</p>
+                    <span ng-if="item.endHappy">Con final feliz.
+                        <span class="glyphicon glyphicon-ok"></span>
+                    </span>
+                    <span ng-if="!item.endHappy">Sin final feliz.
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </span>
+                </a>
+            </div>
         </div>
-    </div>
     </div>
 </div>

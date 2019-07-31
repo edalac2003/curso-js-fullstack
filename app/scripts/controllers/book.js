@@ -9,9 +9,9 @@
  */
 angular.module('spafelizApp').controller('BookCtrl', bookCtrl);
 
-bookCtrl.$inject = ['spaServices'];
+bookCtrl.$inject = ['spaServices', 'spaReservas'];
 
-function bookCtrl(spaServices) {
+function bookCtrl(spaServices, spaReservas) {
     var vm = this;
     vm.form = {};
     vm.$onInit = onInit;
@@ -21,6 +21,13 @@ function bookCtrl(spaServices) {
     function submitBook(){
         debugger;
         console.log('Formulario' + vm.form);
+        spaReservas.save()
+        .then(function(result){
+            
+        })
+        .catch(function(error){
+            alert('Error: ' + error)
+        })
     }
 
     function onInit(){

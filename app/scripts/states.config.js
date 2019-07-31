@@ -35,7 +35,6 @@ function settings($stateProvider, $urlRouterProvider){
 
     $stateProvider.state(homeState);
     $stateProvider.state(mainState);
-    $stateProvider.state(aboutState);
     $stateProvider.state(detailState);
     $stateProvider.state(bookState);
 

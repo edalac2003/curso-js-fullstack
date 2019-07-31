@@ -32,7 +32,7 @@ function spaServicesHttp($http, $q, httpConfig) {
         })
         .catch(function(error){
             console.log(error);
-            defered.reject(error);
+            defered.reject('Error al conectar con el web services');
         });
 
         return promise;
