@@ -11,7 +11,7 @@ Run `grunt` for building and `grunt serve` for preview.
 
 Running `grunt test` will run the unit tests with karma.
 
-##Este proyecto está asociado a curso-js-fullstack-backend.  Revisar ese repositorio
+## Este proyecto está asociado a curso-js-fullstack-backend.  Revisar ese repositorio
 
 ##Assets Logo and banner
 https://pur.vamtam.com/wp-content/uploads/2017/11/parallax4.jpg
