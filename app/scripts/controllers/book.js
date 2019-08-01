@@ -20,20 +20,22 @@ function bookCtrl(spaServices, spaReservas) {
     vm.loadSpaServicesHttp = loadSpaServicesHttp;
 
     function submitBook(){
-        debugger;
+        
         var fecha = moment(vm.form.fechareserva).format('DD/MM/YYYY');
-        var hora = moment(vm.form.fechareserva).format('HH:MM');
+        var hora = moment(vm.form.horareserva).format('hh:mm');
         reserva.nombres = vm.form.nombres;
         reserva.apellidos = vm.form.apellidos;
         reserva.email = vm.form.email;
         reserva.fechareserva = fecha;
-        reserva.horareserva = vm.form.horareserva;
-        reserva.idservicio = hora;
-        reserva.estado = 1 ;
+        reserva.horareserva = hora;
+        reserva.idservicio = vm.form.idservicio;
+        reserva.estado = 1;
 
+        debugger;
         spaReservas.save(reserva)
         .then(function(result){
-            
+            alert('Reserva guardada satisfactoriamente');
+            clean();
         })
         .catch(function(error){
             alert('Error: ' + error)
@@ -53,5 +55,14 @@ function bookCtrl(spaServices, spaReservas) {
         .catch(function(error){
             alert('Error: ' + error)
         })
+    }
+
+    function clean(){
+        vm.form.nombres = '';
+        vm.form.apellidos = '';
+        vm.form.email = '';
+        vm.form.fechareserva = '';
+        vm.form.horareserva = '';
+        vm.form.idservicio = '';
     }
 }

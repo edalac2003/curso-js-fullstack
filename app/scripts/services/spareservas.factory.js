@@ -11,7 +11,7 @@ angular.module('spafelizApp').factory('spaReservas', spaReservas);
 
 spaReservas.$inject = ['spaReservas', '$q'];
 
-function spareservas(spaReservas, $q) {
+function spaReservas(spaReservas, $q) {
 
     var services = {
         saveReserva: saveSpaReserva
@@ -22,7 +22,7 @@ function spareservas(spaReservas, $q) {
     function saveSpaReserva(){
         var defered = $q.defer();
         var promise = defered.promise;
-        spaReservas.getAll()
+        spaReservas.save()
         .then(function(result){
             defered.resolve(result);
         })

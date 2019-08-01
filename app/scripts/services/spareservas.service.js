@@ -1,3 +1,5 @@
+(function(){
+
 'use strict';
 
 /**
@@ -34,3 +36,5 @@ function spaReservas($http, $q, httpConfig) {
         return promise;
     }
 }
+})();
+
